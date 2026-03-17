@@ -1,0 +1,27 @@
+/* Compact pastel strip to match site palette */
+.newsletter-strip.section-pastel {
+  background-color: #e3ffff; /* soft cyan accent used on site */
+  border-radius: 12px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Invite text style */
+.invite-text {
+  font-size: 1.05rem;
+  color: #26313f;
+}
+
+/* Mobile spacing harmony */
+@media (max-width: 768px) {
+  .newsletter-strip.section-pastel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  .invite-text {
+    font-size: 1rem;
+  }
+}

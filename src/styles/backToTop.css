@@ -1,0 +1,101 @@
+/* Tech-Xen style: circular, floating, pop-in + ring, soft shadow */
+.tx-backtop {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 1000;
+  width: 54px;
+  height: 54px;
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  background: #0d6efd; /* brand primary */
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 28px rgba(13,110,253,0.35);
+  transform-origin: 50% 70%;
+  transition: transform 280ms cubic-bezier(.2,.7,.2,1),
+              opacity 220ms ease,
+              box-shadow 220ms ease,
+              background-color 220ms ease;
+  opacity: 0;
+  transform: translateY(14px) scale(0.9);
+  overflow: visible; /* let ring extend */
+}
+
+/* Appearing / hiding */
+.tx-backtop.enter {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.tx-backtop.exit {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px) scale(0.9);
+}
+
+/* One-time intro pop + halo pulse on first show */
+.tx-backtop.intro.enter {
+  animation: tx-pop 420ms cubic-bezier(.2,.7,.2,1) 30ms both;
+}
+.tx-backtop.intro.enter .tx-ring {
+  animation: tx-ring 900ms ease-out 120ms both;
+}
+
+/* Hover polish */
+.tx-backtop:hover {
+  box-shadow: 0 18px 36px rgba(13,110,253,0.45);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Icon */
+.tx-icon {
+  display: inline-block;
+  font-size: 18px; /* swap to SVG for sharper look if preferred */
+  line-height: 1;
+}
+
+/* Halo ring */
+.tx-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Keyframes */
+@keyframes tx-pop {
+  0%   { opacity: 0; transform: translateY(18px) scale(0.8); filter: blur(2px); }
+  60%  { opacity: 1; transform: translateY(0) scale(1.06); filter: blur(0); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes tx-ring {
+  0%   { opacity: 0.0; box-shadow: 0 0 0 0 rgba(13,110,253,0.0); }
+  10%  { opacity: 0.85; box-shadow: 0 0 0 0 rgba(13,110,253,0.35); }
+  100% { opacity: 0.0; box-shadow: 0 0 0 20px rgba(13,110,253,0); }
+}
+
+/* Dark mode tweak (optional) */
+@media (prefers-color-scheme: dark) {
+  .tx-backtop {
+    background: #3b82f6; /* lighter primary on dark */
+    box-shadow: 0 14px 28px rgba(59,130,246,0.35);
+  }
+  .tx-backtop:hover {
+    box-shadow: 0 18px 36px rgba(59,130,246,0.45);
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .tx-backtop,
+  .tx-backtop.enter,
+  .tx-backtop.exit,
+  .tx-backtop.intro.enter .tx-ring {
+    transition: none !important;
+    animation: none !important;
+  }
+}

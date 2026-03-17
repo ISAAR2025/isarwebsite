@@ -1,0 +1,243 @@
+/* ========== GALLERY BASE STYLES ========== */
+.gallery-media {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.media-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image and video content */
+.media-content {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.media-card:hover .media-content {
+  transform: scale(1.05);
+}
+
+/* ========== CAPTION STYLE (VISIBLE ONLY ON DESKTOP) ========== */
+.media-caption {
+  position: absolute;
+  top: 0;              /* cover full height */
+  left: 0;
+  right: 0;
+  bottom: 0;           /* full overlay */
+  display: flex;       /* center text */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55); /* faded dark overlay */
+  color: #fff;
+  text-align: center;
+  opacity: 0;          /* hidden by default */
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  backdrop-filter: blur(2px); /* subtle glassy effect */
+}
+.media-caption {
+  pointer-events: none; /* allow clicks to pass through to the image */
+}
+
+/* Show caption only on hover (desktop only) */
+@media (min-width: 992px) {
+  .media-card:hover .media-caption {
+    opacity: 1;
+  }
+}
+
+/* Hide caption on mobile & tablet */
+@media (max-width: 991px) {
+  .media-caption {
+    display: none !important;
+  }
+}
+
+/* ========== MODAL STYLES ========== */
+.modal-content.bg-dark {
+  background-color: #000 !important;
+  border: none;
+}
+
+.modal-image-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.modal-image {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.02);
+}
+
+/* Caption below image in modal */
+.modal-image-caption {
+  margin-top: 10px;
+  text-align: center;
+  color: #bbb;
+  font-size: 1rem;
+  max-width: 80vw;
+  line-height: 1.4;
+}
+
+/* ========== BUTTON ENHANCEMENTS ========== */
+.tab-btn {
+  background-color: #fff;
+  border: 2px solid #007bff; /* Bootstrap blue */
+  color: #007bff;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.tab-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tab-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+/* ========== FIXED MODAL NAV BUTTONS ========== */
+.modal button[aria-label="Previous image"],
+.modal button[aria-label="Next image"] {
+  position: fixed !important; /* Keeps buttons anchored */
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 1055 !important;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+/* Left & Right positions */
+.modal button[aria-label="Previous image"] {
+  left: 16px !important;
+}
+.modal button[aria-label="Next image"] {
+  right: 16px !important;
+}
+
+/* Hover effect on desktop */
+@media (min-width: 992px) {
+  .modal button[aria-label="Previous image"]:hover,
+  .modal button[aria-label="Next image"]:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Slightly smaller buttons on mobile */
+@media (max-width: 576px) {
+  .modal button[aria-label="Previous image"],
+  .modal button[aria-label="Next image"] {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    font-size: 1.2rem !important;
+  }
+}
+
+/* ========== FIXED CLOSE BUTTON ========== */
+.modal button[aria-label="Close"] {
+  position: fixed !important;
+  top: 16px !important;
+  right: 22px !important;
+  z-index: 1060 !important;
+  font-size: 2.2rem !important;
+  background: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  transition: color 0.2s ease;
+}
+
+@media (min-width: 992px) {
+  .modal button[aria-label="Close"]:hover {
+    color: #aaa !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .btn,
+  .btn-lg {
+    width: 70%;                
+    min-width: 140px;          
+    max-width: 270px;          
+    display: block;
+    margin-left: auto;
+    margin-right: auto;        
+    padding: 0.55rem 1rem;
+    font-size: 0.97rem;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) 
+{
+  .btn-lg {
+    width: 70%;                
+    min-width: 140px;          
+    max-width: 270px;          
+    display: block;
+    margin-left: auto;
+    margin-right: auto;        
+    padding: 0.55rem 1rem;
+    font-size: 0.97rem;
+    box-sizing: border-box;
+  }
+}
+.gallery-hero-section.breadcrumb-bg {
+  background-image: url('../assets/images/photo\ gallery.webp'); /* Path to your image in public/images */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0; /* Adjust padding for spacing */
+  color: white; /* Optional text color for contrast */
+}
+
+.breadcrumb-bg::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #0c183dbe;
+    opacity: .85;
+    z-index: -1;
+}
+.contact-title {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  margin-bottom: 10px;
+}
+.contact-breadcrumb {
+  color: #213e6f;
+  font-size: 1.1rem;
+  margin-top: 14px;
+}

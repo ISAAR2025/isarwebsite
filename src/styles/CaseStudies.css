@@ -1,0 +1,83 @@
+/* Pastel background consistent with site style */
+.case-studies-section.section-pastel {
+  background-color: #ffffff; /* light cyan */
+  border-radius: 12px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Card styling */
+.cs-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e8ecf7;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Labels inside bullet list */
+.cs-label {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .case-studies-section.section-pastel {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 24px;
+  }
+}
+.cs-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition:
+    transform 200ms cubic-bezier(.22,1.05,.6,1.09),
+    box-shadow 220ms,
+    border-color 220ms;
+  will-change: transform, box-shadow;
+  cursor: pointer;
+}
+
+.cs-card:hover,
+.cs-card:focus-within {
+  transform: translateY(-10px) scale(1.035);
+  box-shadow: 0 16px 44px rgba(15, 60, 90, 0.13), 0 2px 8px rgba(67, 97, 238, 0.10);
+  border-color: #d6e3f1;
+  z-index: 3;
+}
+
+.cs-card .img-cover, .cs-card .img-placeholder {
+  transition: transform 320ms cubic-bezier(.4,1.3,.7,.92);
+}
+
+.cs-card:hover .img-cover,
+.cs-card:focus-within .img-cover,
+.cs-card:hover .img-placeholder,
+.cs-card:focus-within .img-placeholder {
+  transform: scale(1.04);
+  filter: brightness(0.97) saturate(1.09);
+}

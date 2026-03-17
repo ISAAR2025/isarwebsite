@@ -1,0 +1,169 @@
+/* ===============================
+   HERO BASE
+   =============================== */
+
+.modern-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Neutral dark overlay (NOT blue) */
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* ===============================
+   CONTENT
+   =============================== */
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1100px;
+  padding: 80px 20px;
+}
+
+/* ===============================
+   STORE CTA – PREMIUM ECOM
+   =============================== */
+
+.hero-eyebrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.hero-store-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  text-decoration: none;
+
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.2s ease;
+}
+
+.hero-store-link:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   TEXT
+   =============================== */
+
+.hero-headline {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 36px;
+}
+
+/* ===============================
+   ACTION BUTTONS
+   =============================== */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.cta {
+  font-size: 1.05rem;
+  padding: 12px 36px;
+}
+
+/* ===============================
+   SLIDER DOTS
+   =============================== */
+
+.visual-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dot.active {
+  background: #ffffff;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+  .modern-hero {
+    min-height: 70vh;
+  }
+
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.7rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+}

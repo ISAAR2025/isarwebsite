@@ -1,0 +1,136 @@
+/* aboutIsarMultiColorAOS.css */
+:root{
+  --tx-muted:#6b7280;
+  --tx-border:#e5e7eb;
+  --tx-title:#0f172a;
+  --tx-text:#1f2937;
+  --tx-primary:#2563eb;
+  --tx-primary-hover:#1d4ed8;
+
+  /* Section tints */
+  --t-soft:#658aceaf;           /* light gray */
+  --t-blue:#56e9e97c;           /* light blue */
+  --t-green:#ffffff94;          /* light green */
+  --t-sand:#E0E0E0;           /* warm sand */
+
+  /* Gradients */
+  --g-purple-1:#f7f3ff;
+  --g-purple-2:#eef6ff;
+  --g-blue-1:#e9f3ff;
+  --g-blue-2:#f0f9ff;
+}
+
+body{ background:#fff; color:var(--tx-text); }
+h1,h2,h3,h4,h5{ color:var(--tx-title); }
+.lead{ color:var(--tx-muted) !important; }
+
+.about-multicolor section{ padding:64px 0; }
+@media (max-width: 991.98px){ .about-multicolor section{ padding:48px 0; } }
+
+/* Distinct section backgrounds */
+.section-white{ background:#fff; }
+.section-soft{ background:var(--t-soft); }
+.section-blue{ background:var(--t-blue); }
+.section-green{ background:var(--t-green); }
+.section-sand{ background:var(--t-sand); }
+.section-gradient-purple{
+  background: linear-gradient(180deg, var(--g-purple-1) 0%, var(--g-purple-2) 100%);
+}
+.section-gradient-blue{
+  background: linear-gradient(180deg, var(--g-blue-1) 0%, var(--g-blue-2) 100%);
+}
+
+/* Cards / content containers */
+.metrics-card{
+  background:#fff; border:1px solid var(--tx-border);
+  border-radius:14px; padding:18px;
+}
+.card{ border-radius:14px; }
+.card-title{ color:var(--tx-title); }
+.card-text{ color:var(--tx-text); }
+.rounded-3{ border-radius:1rem !important; }
+.border{ border-color:var(--tx-border) !important; }
+
+/* Buttons */
+.btn{ border-radius:10px; padding:.75rem 1.25rem; }
+.btn-primary{ background:var(--tx-primary); border-color:var(--tx-primary); }
+.btn-primary:hover{ background:var(--tx-primary-hover); border-color:var(--tx-primary-hover); }
+.btn-outline-secondary{ color:var(--tx-text); border-color:var(--tx-border); }
+.btn-outline-secondary:hover{ background:#f3f4f6; }
+
+/* Responsive images */
+.img-covers{
+  width:100%; 
+  height:100%; 
+  object-fit:cover; 
+  object-position:center; 
+  display:block;
+}
+
+
+/* Metrics typography */
+.metric-value{ font-weight:800; font-size:1.35rem; color:var(--tx-primary); }
+.metric-label{ font-size:.9rem; color:var(--tx-muted); }
+
+/* Back to top */
+.back-to-top{
+  position:fixed; right:16px; bottom:16px; z-index:1040;
+  border-radius:999px; padding:.5rem .9rem; line-height:1;
+  display:none;
+}
+.back-to-top.show{ display:inline-flex; }
+/* Ensure equal heights and tidy alignment */
+.steps-grid .col-6,
+.steps-grid .col-md-4,
+.steps-grid .col-lg-2{
+  display:flex;
+  align-items:stretch;
+}
+
+.step-card{
+  background:#fff;
+  border:1px solid var(--tx-border);
+  border-radius:14px;
+  padding:16px 12px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  width:100%;
+}
+
+.step-icon-wrap{
+  max-width:72px;        /* keeps icons consistent */
+  margin:0 auto;
+  border:1px solid var(--tx-border);
+  border-radius:12px;
+  background:#fff;
+  overflow:hidden;       /* works with ratio container */
+}
+
+.step-icon{
+  width:60%;
+  height:60%;
+  object-fit:contain;
+  margin:auto;           /* centers inside ratio */
+}
+
+/* Title wrap: prevent text wrapping pushing heights too much */
+.step-card h6{
+  min-height:2.2em;      /* reserve two lines for consistency */
+  line-height:1.1;
+}
+
+.step-card p.small{
+  margin-top:.25rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 575.98px){
+  .step-icon-wrap{ max-width:64px; }
+}
+.section-background{
+   background-image: url(https://consulting.stylemixthemes.com/osaka/wp-content/uploads/sites/43/2019/10/about-bg_04.png?id=5924) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}

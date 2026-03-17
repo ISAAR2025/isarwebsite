@@ -1,0 +1,389 @@
+/* Footer Base */
+.footer {
+  background: #052343;;
+  color: #ffffff;
+  margin-top: auto;
+  padding: 60px 0 0;
+}
+
+/* Main Footer Row */
+.footer-main-row {
+  margin-bottom: 30px;
+}
+
+/* Contact Row */
+.contact-row {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0;
+}
+
+/* ========== COMPANY INFO ========== */
+.company-info {
+  margin-bottom: 30px;
+  text-align: center; /* center all content inside this column */
+}
+
+.logo-container {
+  display: inline-block; /* shrink container to logo size */
+  margin-bottom: 15px;   /* space between logo and description */
+  
+  padding: 0px;         /* space around logo */
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;        /* center the image in container */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.logo-container {
+  display: flex;
+  align-items: center; /* vertically center logo & text */
+  gap: 12px; /* spacing between logo and text */
+}
+
+
+
+.company-name {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.2;
+  text-align: left;
+  
+}
+
+.company-description {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: all .3s ease;
+  flex-shrink: 0;
+}
+
+.footer-social a:hover {
+  background: #c5ccd35f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+}
+
+/* ========== SECTION HEADINGS ========== */
+.footer-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #fff;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #007bff;
+}
+
+/* ========== QUICK LINKS ========== */
+.quick-links {
+  margin-bottom: 30px;
+}
+
+.links-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-column li {
+  margin-bottom: 10px;
+}
+
+.links-column button {
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: .9rem;
+  text-align: left;
+  padding: 4px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: all .25s ease;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.links-column button:hover {
+  color: #007bff;
+  transform: translateX(3px);
+}
+
+/* ========== PROGRAMS & SERVICES ========== */
+.services-links {
+  margin-bottom: 30px;
+}
+
+.services-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-column ul li {
+  margin-bottom: 12px;
+}
+
+.services-column ul li button {
+  background: none;
+  border: none;
+  color: #cccccc;
+  text-decoration: none;
+  font-size: .85rem;
+  cursor: pointer;
+  transition: all .3s ease;
+  padding: 4px 0;
+  text-align: left;
+  width: 100%;
+  line-height: 1.3;
+  word-wrap: break-word;
+  white-space: normal;
+  hyphens: auto;
+}
+
+.services-column ul li button:hover {
+  color: #007bff;
+  transform: translateX(3px);
+}
+
+/* ========== CONTACT INFO ========== */
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start !important;
+  text-align: left !important; /* force left text alignment */
+}
+.contact-row h3 {
+  color: #fff;
+  margin-bottom: 20px; /* ✅ extra gap between title and contact items */
+  font-size: x-large;
+}
+
+/* Applies to phone, email, and address blocks */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: #cccccc;
+  font-size: 0.95rem;
+  width: 100%; /* makes each item span full width on mobile */
+  text-align: left;
+}
+
+.contact-icon {
+  color: #007bff;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contact-item a,
+.address span {
+  color: #cccccc;
+  text-decoration: none;
+  line-height: 1.5;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* Social icons section */
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important; /* ✅ keeps left-aligned on mobile */
+  gap: 15px;
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: #cccccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #007bff;
+}
+
+
+
+/* ========== SEO KEYWORDS ========== */
+.seo-keywords {
+  background: rgba(0,0,0,0.3);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.seo-keywords p {
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #999999;
+  margin: 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.seo-keywords strong {
+  color: #007bff;
+}
+
+/* ========== FOOTER BOTTOM ========== */
+.footer-bottom {
+  background: rgba(0,0,0,0.5);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-size: .9rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 991.98px) {
+  .footer {
+    padding: 50px 0 0;
+  }
+  
+  .brand-name {
+    font-size: 2rem;
+  }
+  
+  .services-links {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+  
+  .footer-main-row {
+    margin-bottom: 20px;
+  }
+  
+  .contact-row {
+    padding-top: 20px;
+  }
+  
+  .logo-container {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .company-description {
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-section h3 {
+    text-align: center;
+  }
+  
+  .links-column button,
+  .services-column button {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .brand-name {
+    font-size: 1.8rem;
+    margin-left: 5px; 
+  }
+  
+  .links-column button,
+  .services-column button {
+    font-size: .85rem;
+  }
+  
+  .contact-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .address span {
+    max-width: 280px;
+  }
+}
+/* By default (desktop), social icons stay on the right */
+/* Desktop: keep row (side by side) */
+.footer-section.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Responsive: stack column, icons below */
+@media (max-width: 991.98px) {
+  .footer-section.contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-social {
+    margin-top: 20px;
+    justify-content: flex-start !important;
+    align-self: flex-start;
+    
+    margin-bottom: 36px; /* Increase as needed */
+
+  }
+}

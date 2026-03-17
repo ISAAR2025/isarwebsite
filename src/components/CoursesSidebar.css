@@ -1,0 +1,184 @@
+/* CourseDetailsPage.css */
+
+.details-page-layout {
+  display: flex;
+  max-width: 1240px;
+  margin: 48px auto;
+  gap: 36px;
+  padding: 0 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+}
+
+/* Stack vertically on smaller screens to prevent overlap */
+@media (max-width: 900px) {
+  .details-page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 32px;
+  }
+
+  .details-content {
+    max-width: 100% !important;
+  }
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2563eb;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 32px;
+  font-size: 1.2rem;
+}
+
+.back-btn:hover {
+  color: #1e40af;
+}
+
+.details-content {
+  flex: 1;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Animated gradient heading */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.details-title {
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(270deg, #2563eb, #60a5fa, #3b82f6, #60a5fa);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 20s ease infinite;
+  color: transparent;
+}
+
+/* Show full images with object-fit contain + appropriate max height */
+.details-image {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 16px;
+  object-fit: contain;
+  box-shadow: 0 10px 32px rgba(37, 99, 235, 0.16);
+}
+
+.details-meta {
+  background: #eef6ff;
+  border-radius: 12px;
+  padding: 20px;
+  font-weight: 600;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  color: #2d3748;
+}
+
+.enroll-btn {
+  max-width: 180px;
+  padding: 14px 26px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 900;
+  color: white;
+  background: linear-gradient(90deg, #2563eb 70%, #60a5fa 100%);
+  cursor: pointer;
+}
+
+.enroll-btn:hover {
+  background: linear-gradient(90deg, #1e40af 70%, #2563eb 100%);
+}
+
+.details-description {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+
+/* CoursesSidebar.css */
+.sidebar-container {
+  width: 280px;
+  height: 90vh; /* fixed height for scrolling */
+  overflow-y: auto;
+  background: #f7faff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  position: sticky;
+  top: 84px;
+  padding: 24px 20px;
+  user-select: none;
+  scrollbar-width: thin;
+  scrollbar-color: #2563eb transparent;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #2563eb;
+  border-radius: 10px;
+}
+
+.sidebar-header {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #2563eb;
+  margin-bottom: 22px;
+  border-bottom: 2px solid #a1c2ff;
+  padding-bottom: 6px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #334e6a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-item:hover,
+.sidebar-item:focus {
+  background-color: #dbeafe;
+  color: #1e40af;
+  outline: none;
+}
+
+.sidebar-item.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  pointer-events: none;
+}

@@ -1,0 +1,25 @@
+.career-card {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 16px rgba(13, 110, 253, 0.08);
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.career-card:hover,
+.career-card:focus {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.18);
+  transform: translateY(-4px);
+  z-index: 5;
+}
+.career-card .btn-outline-primary {
+  transition: background 0.2s, color 0.2s;
+}
+.career-card:hover .btn-outline-primary,
+.career-card:focus .btn-outline-primary {
+  background: white;
+  color: #0d6efd;
+  border-color: #0d6efd;
+}

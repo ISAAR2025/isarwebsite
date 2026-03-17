@@ -1,0 +1,102 @@
+/* Pastel section background that matches site style */
+.collaborations.section-pastel {
+  background-color: #e3eeff; /* soft blue-violet used in site palette */
+  border-radius: 12px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Reusable frosted panel */
+.glass-lite {
+  background: #d3f3f1;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+.collab-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.blue-background-with-particals{
+  background-color: #001641;
+    background-image: url(https://gerow-wp.themedox.com/wp-content/uploads/2023/08/choose_shape.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 120px 0px;
+}
+
+.sub-title-round {
+    
+    color: #1e59ef;
+    padding-left: 5px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: -10px;
+    font-size: 2.1rem;
+}
+
+.main-title{ color: #fff !important;
+font-size: 45px;
+margin-bottom: 15px;}
+
+ul.feature-list{color: #fff !important;}
+
+/* Responsive rhythm */
+@media (max-width: 768px) {
+  .collaborations.section-pastel {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 991.98px) {
+ 
+  .main-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-title, .about-text-col, .feature-list {
+    text-align: center !important;
+  }
+   .collab-img-main {
+    margin-top: 24px;
+    max-width: 90vw;
+  }
+}
+}
+.collab-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* On large screens, allow even larger images if desired */
+@media (max-width: 767.98px) {
+  .sub-title-round {
+    background: transparent !important;
+    color: #2e34d1 !important; /* Make text dark blue for visibility */
+    border: none !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    box-shadow: none !important;
+    font-size: 2.1rem !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-title {
+    font-size: 1.18rem !important;  /* Adjust as needed for best fit */
+    text-align: center !important;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
